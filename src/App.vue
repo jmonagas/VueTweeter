@@ -6,6 +6,6 @@
 
 <style scoped>
 #app {
-  text-align: center;
+  text-align: justify;
 }
 </style>

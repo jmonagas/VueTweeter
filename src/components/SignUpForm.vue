@@ -2,16 +2,12 @@
   <div id="firstpage">
     <p>Email</p>
     <input type="text" id="email-input" v-model="email" />
-
     <p>Username</p>
     <input type="text" id="username-input" v-model="username" />
-
     <p>Password</p>
     <input type="text" id="password-input" v-model="password" />
-
     <p>Bio</p>
     <textarea id="bio-input" v-model="bio"></textarea>
-
     <p>Birthdate (YYYY-MM-DD)</p>
     <input type="text" id="birthdate-input" v-model="birthdate" />
     <br />
