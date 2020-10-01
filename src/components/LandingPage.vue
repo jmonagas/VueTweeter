@@ -1,30 +1,24 @@
 <template>
   <div id="welcome">
-    <h3>Welcome</h3>
-    <div>
-      <sign-up-form></sign-up-form>
-    </div>
-    <div>
-      <login-form></login-form>
+    <div class="one">
+      <h1>Welcome to the Tweeter Project</h1>
+      <h3>This is a mandatory assignment at InnoTech College</h3>
+      <p>Authored by Jose G. Monagas</p>
+      <p>Copyrights (C) 2020</p>
     </div>
   </div>
 </template>
 
 <script>
-import SignUpForm from "../components/SignUpForm.vue";
-import LoginForm from "../components/LoginForm.vue";
-
 export default {
   name: "landing-page",
-  components: {
-    SignUpForm,
-    LoginForm
-  }
+  components: {}
 };
 </script>
 
 <style scoped>
 #welcome {
   text-align: center;
+  margin-top: 30vh;
 }
 </style>

@@ -66,13 +66,11 @@ export default {
 
 <style scoped>
 #signup {
-  background-color: rgb(189, 233, 247);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  border-radius: 20px;
 }
 #bio-input {
   width: 250px;
-  height: 50px;
+  height: 30px;
 }
 </style>

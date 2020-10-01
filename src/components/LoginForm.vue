@@ -57,8 +57,6 @@ export default {
 
 <style scoped>
 #login {
-  background-color: rgb(189, 233, 247);
   text-align: center;
-  border-radius: 20px;
 }
 </style>
