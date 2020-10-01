@@ -1,8 +1,6 @@
 <template>
   <div>
-    <router-link to="/login">Login</router-link>
-    <h3>Please Register</h3>
-    <sign-up-form></sign-up-form>
+    <sign-up-form />
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 import SignUpForm from "../components/SignUpForm.vue";
 
 export default {
-  name: "signup-page",
+  name: "sign-up-page",
   components: {
     SignUpForm
   }

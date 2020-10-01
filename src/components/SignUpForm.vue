@@ -1,5 +1,6 @@
 <template>
-  <div id="firstpage">
+  <div id="signup">
+    <h3>Please Register</h3>
     <p>Email</p>
     <input type="text" id="email-input" v-model="email" />
     <p>Username</p>
@@ -8,7 +9,7 @@
     <input type="text" id="password-input" v-model="password" />
     <p>Bio</p>
     <textarea id="bio-input" v-model="bio"></textarea>
-    <p>Birthdate (YYYY-MM-DD)</p>
+    <p>Birthdate (yyyy-mm-dd)</p>
     <input type="text" id="birthdate-input" v-model="birthdate" />
     <br />
     <br />
@@ -64,7 +65,7 @@ export default {
 </script>
 
 <style scoped>
-#firstpage {
+#signup {
   background-color: rgb(189, 233, 247);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
