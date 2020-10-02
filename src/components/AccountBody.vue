@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="frame1">
     <h3>Account Body</h3>
     <account-body />
   </div>
@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style scoped>
+#frame1 {
+  background-color: cornsilk;
+}
 </style>
