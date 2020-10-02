@@ -44,11 +44,12 @@ export default {
         .then(response => {
           cookies.set("session", response.data.loginToken);
           console.log(response);
-          this.loginStatus = "Success";
+          this.loginStatus = "Welcome";
         })
         .catch(error => {
           console.log(error);
           this.loginStatus = "Error";
+          alert("No User Is Logged In... Please Try Again!");
         });
     }
   }

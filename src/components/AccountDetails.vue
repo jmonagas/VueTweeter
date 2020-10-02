@@ -14,6 +14,8 @@
     <br />
     <br />
     <button @click="updateUser">Send</button>
+    <br />
+    <br />
   </div>
 </template>
 

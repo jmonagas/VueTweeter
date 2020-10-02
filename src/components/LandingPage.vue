@@ -3,7 +3,7 @@
     <div class="one">
       <h1>Welcome to the Tweeter Project</h1>
       <h3>This is a mandatory assignment at InnoTech College</h3>
-      <p>Authored by Jose G. Monagas</p>
+      <p>Created by Jose G. Monagas</p>
       <p>Copyrights (C) 2020</p>
     </div>
   </div>

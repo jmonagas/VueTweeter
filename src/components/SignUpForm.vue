@@ -58,6 +58,7 @@ export default {
         })
         .catch(error => {
           console.log(error);
+          alert("Error... Please Try Again!");
         });
     }
   }
