@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     loginUser: function() {
-      this.loginUser = "Loading";
+      this.loginUser = "loginUser";
       axios
         .request({
           method: "POST",

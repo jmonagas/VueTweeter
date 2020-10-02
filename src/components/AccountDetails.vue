@@ -1,6 +1,6 @@
 <template>
-  <div id="signup">
-    <h3>Please Register</h3>
+  <div id="accountinfo">
+    <h3>Update Account</h3>
     <p>Email</p>
     <input type="text" id="email-input" v-model="email" />
     <p>Username</p>
@@ -13,7 +13,7 @@
     <input type="text" id="birthdate-input" v-model="birthdate" />
     <br />
     <br />
-    <button @click="signupUser">Sign Up</button>
+    <button @click="updateUser">Send</button>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ import axios from "axios";
 import cookies from "vue-cookies";
 
 export default {
-  name: "signup-form",
+  name: "account-details",
   data() {
     return {
       email: "",
@@ -33,10 +33,10 @@ export default {
     };
   },
   methods: {
-    signupUser: function() {
+    updateUser: function() {
       axios
         .request({
-          method: "POST",
+          method: "PATCH",
           url: "https://tweeterest.ml/api/users",
           headers: {
             "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default {
         })
         .then(response => {
           // Write Code for Validation of Cookie
-          cookies.set("session", response.data.loginToken);
+          cookies.set("session", response);
           console.log(response);
           //Create Function to Send to Home
         })
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style scoped>
-#signup {
+#accountinfo {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
