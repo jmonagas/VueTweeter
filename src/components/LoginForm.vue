@@ -65,5 +65,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
+  background-color: #f5f7f7;
+  border-radius: 5px;
 }
 </style>

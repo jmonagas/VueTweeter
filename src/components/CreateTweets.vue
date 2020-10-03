@@ -1,7 +1,12 @@
 <template>
   <div id="create_tweets">
     <p>Compose Tweets</p>
-    <textarea class="box" id="tweet-input" v-model="mytweet"></textarea>
+    <textarea
+      class="box"
+      id="tweet-input"
+      v-model="mytweet"
+      placeholder="Max 200 Characters"
+    ></textarea>
     <br />
     <br />
     <button @click="sendThistweet">Send Tweet</button>
@@ -57,5 +62,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
+  background-color: #f5f7f7;
+  border-radius: 5px;
 }
 </style>

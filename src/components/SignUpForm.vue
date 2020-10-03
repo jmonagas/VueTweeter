@@ -8,9 +8,19 @@
     <p>Password</p>
     <input class="box" type="text" id="password-input" v-model="password" />
     <p>Bio</p>
-    <textarea class="box" v-model="bio"></textarea>
-    <p>Birthdate (yyyy-mm-dd)</p>
-    <input class="box" type="text" id="birthdate-input" v-model="birthdate" />
+    <textarea
+      class="box"
+      v-model="bio"
+      placeholder="Max 200 Characters"
+    ></textarea>
+    <p>Birthdate</p>
+    <input
+      class="box"
+      type="text"
+      id="birthdate-input"
+      v-model="birthdate"
+      placeholder="yyyy-mm-dd"
+    />
     <br />
     <br />
     <button @click="signupUser">Sign Up</button>
@@ -73,5 +83,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
+  background-color: #f5f7f7;
+  border-radius: 5px;
 }
 </style>

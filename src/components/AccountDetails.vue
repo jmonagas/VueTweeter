@@ -8,13 +8,30 @@
     <p>Password</p>
     <input class="box" type="text" id="password-input" v-model="password" />
     <p>Bio</p>
-    <textarea class="box" id="bio-input" v-model="bio"></textarea>
-    <p>Birthdate (yyyy-mm-dd)</p>
-    <input class="box" type="text" id="birthdate-input" v-model="birthdate" />
+    <textarea
+      class="box"
+      id="bio-input"
+      v-model="bio"
+      placeholder="Max 200 Characters"
+    ></textarea>
+    <p>Birthdate</p>
+    <input
+      class="box"
+      type="text"
+      id="birthdate-input"
+      v-model="birthdate"
+      placeholder="yyyy-mm-dd"
+    />
     <br />
     <br />
-    <button @click="updateUser">Send</button>
+    <button @click="updateUser">Update Account</button>
     <br />
+    <br />
+    <p>Password</p>
+    <input class="box" type="text" id="password-input1" v-model="password" />
+    <br />
+    <br />
+    <button @click="deleteAccount">Delete Account</button>
     <br />
   </div>
 </template>
@@ -60,6 +77,31 @@ export default {
           console.log(error);
           alert("Something Went Wrong");
         });
+    },
+    deleteAccount: function() {
+      alert("Do You Mean to Delete Your Account?");
+      axios
+        .request({
+          method: "DELETE",
+          url: "https://tweeterest.ml/api/users",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Api-Key": "KuxH91zPs9WUhLLav8O6KNil0o4lB1vXKPYnN1nLbJTEl"
+          },
+          data: {
+            loginToken: cookies.get("session"),
+            password: this.password
+          }
+        })
+        .then(response => {
+          cookies.remove("session");
+          this.$router.push("/login");
+
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 };
@@ -73,5 +115,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
+  background-color: #f5f7f7;
+  border-radius: 5px;
 }
 </style>
