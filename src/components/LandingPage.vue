@@ -1,5 +1,5 @@
 <template>
-  <div id="welcome">
+  <div id="landing_page">
     <div class="one">
       <h1>Welcome to the Tweeter Project</h1>
       <h3>This is a mandatory assignment at InnoTech College</h3>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-#welcome {
+#landing_page {
   text-align: center;
   margin-top: 30vh;
 }

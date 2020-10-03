@@ -1,5 +1,5 @@
 <template>
-  <div id="signup">
+  <div id="signup_form">
     <h3>Please Register</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
@@ -51,11 +51,9 @@ export default {
           }
         })
         .then(response => {
-          // Write Code for Validation of Cookie
           cookies.set("session", response.data.loginToken);
           this.$router.push("/login");
           console.log(response);
-          //Create Function to Send to Home
         })
         .catch(error => {
           console.log(error);
@@ -68,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-#signup {
+#signup_form {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }

@@ -13,10 +13,9 @@
 #app {
   text-align: right;
   margin: 3vh;
-  background-color: rgb(249, 251, 252);
-  height: 90vh;
 }
 #nav {
-  margin: 5vh;
+  margin: 2vh;
+  padding: 1vh;
 }
 </style>

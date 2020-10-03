@@ -1,7 +1,7 @@
 <template>
   <div id="mainbody">
     <div>
-      <account-body/>
+      <account-body />
     </div>
     <div id="box1">
       <account-details />
@@ -12,12 +12,23 @@
 <script>
 import AccountDetails from "../components/AccountDetails.vue";
 import AccountBody from "../components/AccountBody.vue";
+import cookies from "vue-cookies";
 
 export default {
   name: "user-account",
   components: {
     AccountDetails,
-    AccountBody,
+    AccountBody
+  },
+  methods: {
+    validation: function() {
+      if (cookies.get("session") == undefined) {
+        this.$router.push("/login");
+      }
+    }
+  },
+  mounted() {
+    this.validation();
   }
 };
 </script>
@@ -29,6 +40,6 @@ export default {
   text-align: center;
 }
 #box1 {
-  border: rgb(40, 150, 201) solid 1px;
+  margin: 1vh;
 }
 </style>

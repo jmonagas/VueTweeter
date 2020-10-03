@@ -1,5 +1,5 @@
 <template>
-  <div id="accountinfo">
+  <div id="account_details">
     <h3>Update Account</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
@@ -53,10 +53,8 @@ export default {
           }
         })
         .then(response => {
-          // Write Code for Validation of Cookie
           cookies.set("session", response);
           console.log(response);
-          //Create Function to Send to Home
         })
         .catch(error => {
           console.log(error);
@@ -68,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-#accountinfo {
+#account_details {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }

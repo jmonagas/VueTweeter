@@ -1,18 +1,23 @@
 <template>
-  <div id="frame1">
-    <button id="btn">Logout</button>
-    <p @click="getAlltweets">Display Tweets Here</p>
+  <div id="account_body">
+    <button>Logout</button>
+    <button @click="getAlltweets">Review</button>
     <ul>
-      <li v-for="tweet in tweets" :key="tweet.tweetId">{{ tweet.content }}</li>
+      <li v-for="tweet in tweets" :key="tweet.tweetId">
+        {{ tweet.content + " " + tweet.username }}
+      </li>
     </ul>
+    <create-tweets />
   </div>
 </template>
 
 <script>
+import CreateTweets from "./CreateTweets.vue";
 import axios from "axios";
 
 export default {
   name: "account-body",
+  components: { CreateTweets },
   data() {
     return {
       tweets: []
@@ -42,8 +47,8 @@ export default {
 </script>
 
 <style scoped>
-#frame1 {
-  border: solid rgb(8, 196, 243) 1px;
+#account_body {
   text-align: justify;
+  padding: 2vh;
 }
 </style>

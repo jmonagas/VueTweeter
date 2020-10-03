@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div id="login_form">
     <h3>Please Login</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style scoped>
-#login {
+#login_form {
   text-align: center;
 }
 .box {
