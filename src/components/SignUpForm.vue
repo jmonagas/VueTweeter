@@ -53,12 +53,14 @@ export default {
         .then(response => {
           // Write Code for Validation of Cookie
           cookies.set("session", response.data.loginToken);
+          this.$router.push("/login");
           console.log(response);
           //Create Function to Send to Home
         })
         .catch(error => {
           console.log(error);
           alert("Something Went Wrong... Please Try Again!");
+          this.$router.push("/signup");
         });
     }
   }

@@ -43,6 +43,7 @@ export default {
         })
         .then(response => {
           cookies.set("session", response.data.loginToken);
+          this.$router.push("/account");
           console.log(response);
           this.loginStatus = "Success";
         })
@@ -50,6 +51,7 @@ export default {
           console.log(error);
           this.loginStatus = "Something Went Wrong";
           alert("No User Is Logged In... Please Try Again!");
+          this.$router.push("/login");
         });
     }
   }
