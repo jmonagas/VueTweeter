@@ -1,7 +1,7 @@
 <template>
   <div id="mainbody">
     <div>
-      <p>Display Tweets Here</p>
+      <account-body/>
     </div>
     <div id="box1">
       <account-details />
@@ -11,11 +11,13 @@
 
 <script>
 import AccountDetails from "../components/AccountDetails.vue";
+import AccountBody from "../components/AccountBody.vue";
 
 export default {
   name: "user-account",
   components: {
-    AccountDetails
+    AccountDetails,
+    AccountBody,
   }
 };
 </script>

@@ -2,15 +2,15 @@
   <div id="signup">
     <h3>Please Register</h3>
     <p>Email</p>
-    <input type="text" id="email-input" v-model="email" />
+    <input class="box" type="text" id="email-input" v-model="email" />
     <p>Username</p>
-    <input type="text" id="username-input" v-model="username" />
+    <input class="box" type="text" id="username-input" v-model="username" />
     <p>Password</p>
-    <input type="text" id="password-input" v-model="password" />
+    <input class="box" type="text" id="password-input" v-model="password" />
     <p>Bio</p>
-    <textarea id="bio-input" v-model="bio"></textarea>
+    <textarea class="box" v-model="bio"></textarea>
     <p>Birthdate (yyyy-mm-dd)</p>
-    <input type="text" id="birthdate-input" v-model="birthdate" />
+    <input class="box" type="text" id="birthdate-input" v-model="birthdate" />
     <br />
     <br />
     <button @click="signupUser">Sign Up</button>
@@ -58,7 +58,7 @@ export default {
         })
         .catch(error => {
           console.log(error);
-          alert("Error... Please Try Again!");
+          alert("Something Went Wrong... Please Try Again!");
         });
     }
   }
@@ -70,8 +70,8 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-#bio-input {
-  width: 250px;
+.box {
+  width: 220px;
   height: 30px;
 }
 </style>

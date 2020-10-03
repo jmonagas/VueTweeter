@@ -2,14 +2,14 @@
   <div id="login">
     <h3>Please Login</h3>
     <p>Email</p>
-    <input type="text" id="email-input" v-model="email" />
+    <input class="box" type="text" id="email-input" v-model="email" />
     <p>Password</p>
-    <input type="text" id="password-input" v-model="password" />
+    <input class="box" type="text" id="password-input" v-model="password" />
     <br />
     <br />
     <button @click="loginUser">Login</button>
     <p></p>
-    <h3>{{ loginStatus }}</h3>
+    <h4>{{ loginStatus }}</h4>
   </div>
 </template>
 
@@ -44,11 +44,11 @@ export default {
         .then(response => {
           cookies.set("session", response.data.loginToken);
           console.log(response);
-          this.loginStatus = "Welcome";
+          this.loginStatus = "Success";
         })
         .catch(error => {
           console.log(error);
-          this.loginStatus = "Error";
+          this.loginStatus = "Something Went Wrong";
           alert("No User Is Logged In... Please Try Again!");
         });
     }
@@ -59,5 +59,9 @@ export default {
 <style scoped>
 #login {
   text-align: center;
+}
+.box {
+  width: 220px;
+  height: 30px;
 }
 </style>
