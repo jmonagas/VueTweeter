@@ -1,6 +1,6 @@
 <template>
   <div id="signup_form">
-    <h3>Please Register</h3>
+    <h4>Please Register</h4>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Username</p>
@@ -19,7 +19,7 @@
       type="text"
       id="birthdate-input"
       v-model="birthdate"
-      placeholder="yyyy-mm-dd"
+      placeholder="YYYY-MM-DD"
     />
     <br />
     <br />
@@ -83,7 +83,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
-  background-color: #f5f7f7;
+  background-color: #f5f8fa;
   border-radius: 5px;
 }
 </style>

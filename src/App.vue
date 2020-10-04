@@ -12,10 +12,15 @@
 <style scoped>
 #app {
   text-align: right;
-  margin: 3vh;
+  font-size: 18px;
+  min-height: 90vh;
 }
 #nav {
-  margin: 2vh;
-  padding: 1vh;
+  margin: 0;
+  padding: 3vh 4vh;
+  background-color: #1da1f2;
+}
+#nav a {
+  color: white;
 }
 </style>

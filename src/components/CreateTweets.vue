@@ -2,7 +2,7 @@
   <div id="create_tweets">
     <p>Compose Tweets</p>
     <textarea
-      class="box"
+      class="box1"
       id="tweet-input"
       v-model="mytweet"
       placeholder="Max 200 Characters"
@@ -59,10 +59,10 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-.box {
-  width: 220px;
-  height: 30px;
-  background-color: #f5f7f7;
+.box1 {
+  width: 300px;
+  height: 200px;
+  background-color: #f5f8fa;
   border-radius: 5px;
 }
 </style>

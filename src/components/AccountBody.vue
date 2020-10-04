@@ -80,6 +80,12 @@ export default {
 ul {
   text-align: justify;
   padding: 1vh;
-  line-height: 1.5;
+  list-style: none;
+}
+li {
+  line-height: 2;
+  border: solid 0.5px #e1e8ed;
+  padding: 2vh 1vh;
+  border-radius: 5px;
 }
 </style>

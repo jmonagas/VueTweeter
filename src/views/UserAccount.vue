@@ -41,5 +41,7 @@ export default {
 }
 #box1 {
   margin: 1vh;
+  background-color: #1da1f2;
+  color: white;
 }
 </style>

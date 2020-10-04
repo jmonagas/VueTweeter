@@ -1,6 +1,6 @@
 <template>
   <div id="account_details">
-    <h3>Update Account</h3>
+    <h4>Update Account</h4>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Username</p>
@@ -20,7 +20,7 @@
       type="text"
       id="birthdate-input"
       v-model="birthdate"
-      placeholder="yyyy-mm-dd"
+      placeholder="YYYY-MM-DD"
     />
     <br />
     <br />
@@ -32,6 +32,7 @@
     <br />
     <br />
     <button @click="deleteAccount">Delete Account</button>
+    <br />
     <br />
   </div>
 </template>
@@ -115,7 +116,7 @@ export default {
 .box {
   width: 220px;
   height: 30px;
-  background-color: #f5f7f7;
+  background-color: white;
   border-radius: 5px;
 }
 </style>

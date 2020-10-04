@@ -1,6 +1,6 @@
 <template>
   <div id="login_form">
-    <h3>Please Login</h3>
+    <h4>Please Login</h4>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Password</p>
@@ -8,8 +8,9 @@
     <br />
     <br />
     <button @click="loginUser">Login</button>
-    <p></p>
-    <h4>{{ loginStatus }}</h4>
+    <br />
+    <br />
+    <p>{{ loginStatus }}</p>
   </div>
 </template>
 
@@ -61,11 +62,12 @@ export default {
 <style scoped>
 #login_form {
   text-align: center;
+  border-radius: 5px;
 }
 .box {
   width: 220px;
   height: 30px;
-  background-color: #f5f7f7;
+  background-color: #f5f8fa;
   border-radius: 5px;
 }
 </style>
