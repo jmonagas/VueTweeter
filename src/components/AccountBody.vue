@@ -12,11 +12,13 @@
             " : " +
             tweet.username +
             " wrote : " +
-            tweet.content
+            tweet.content +
+            " "
         }}
         <button @click="deleteTweets(tweet.tweetId)">Delete</button>
         <edit-tweets :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
+        <follows :userId="tweet.userId" />
       </li>
     </ul>
   </div>
@@ -26,13 +28,14 @@
 import CreateTweets from "./CreateTweets.vue";
 import MakeComment from "./MakeComment.vue";
 import EditTweets from "./EditTweets";
+import Follows from "./Follows.vue";
 
 import axios from "axios";
 import cookies from "vue-cookies";
 
 export default {
   name: "account-body",
-  components: { CreateTweets, MakeComment, EditTweets },
+  components: { CreateTweets, MakeComment, EditTweets, Follows },
   data() {
     return {
       tweets: []
