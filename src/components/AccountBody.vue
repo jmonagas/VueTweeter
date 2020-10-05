@@ -1,25 +1,30 @@
 <template>
   <div id="account_body">
     <button>Logout</button>
+    <create-tweets />
     <button @click="getAlltweets">Review</button>
     <ul>
       <li v-for="tweet in tweets" :key="tweet.tweetId">
         {{ tweet.username + " wrote: " + tweet.content }}
         <button @click="deleteTweets(tweet.tweetId)">Delete</button>
+        <edit-tweets :tweetId="tweet.tweetId" />
+        <make-comment :tweetId="tweet.tweetId" />
       </li>
     </ul>
-    <create-tweets />
   </div>
 </template>
 
 <script>
 import CreateTweets from "./CreateTweets.vue";
+import MakeComment from "./MakeComment.vue";
+import EditTweets from "./EditTweets";
+
 import axios from "axios";
 import cookies from "vue-cookies";
 
 export default {
   name: "account-body",
-  components: { CreateTweets },
+  components: { CreateTweets, MakeComment, EditTweets },
   data() {
     return {
       tweets: []
