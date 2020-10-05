@@ -1,11 +1,19 @@
 <template>
   <div id="account_body">
-    <button>Logout</button>
+    <button @click="endSession">Logout</button>
     <create-tweets />
-    <button @click="getAlltweets">Review</button>
-    <ul>
+    <button @click="reviewTweets">Review</button>
+    <button @click="hideContent">Hide/Show</button>
+    <ul id="main_content">
       <li v-for="tweet in tweets" :key="tweet.tweetId">
-        {{ tweet.username + " wrote: " + tweet.content }}
+        {{
+          " On " +
+            tweet.created_at +
+            " : " +
+            tweet.username +
+            " wrote : " +
+            tweet.content
+        }}
         <button @click="deleteTweets(tweet.tweetId)">Delete</button>
         <edit-tweets :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
@@ -31,7 +39,7 @@ export default {
     };
   },
   methods: {
-    getAlltweets: function() {
+    reviewTweets: function() {
       axios
         .request({
           method: "GET",
@@ -44,6 +52,7 @@ export default {
         .then(response => {
           this.tweets = response.data;
           console.log(response.data);
+          this.tweets.reverse();
         })
         .catch(error => {
           console.log(error);
@@ -72,6 +81,19 @@ export default {
         .catch(error => {
           console.log(error);
         });
+    },
+    endSession: function() {
+      cookies.remove("session");
+      alert("Your Session Has Ended!");
+      this.$router.push("/login");
+    },
+    hideContent: function() {
+      let myContent = document.getElementById("main_content");
+      if (myContent.style.display === "none") {
+        myContent.style.display = "block";
+      } else {
+        myContent.style.display = "none";
+      }
     }
   }
 };
