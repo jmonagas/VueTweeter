@@ -1,6 +1,6 @@
 <template>
   <div id="my_follows">
-    <button @click="followThis">Follow</button>
+    <button class="btn2" @click="followThis">Follow</button>
     <p>{{ ifollow }}</p>
   </div>
 </template>
@@ -51,4 +51,8 @@ export default {
 </script>
 
 <style scoped>
+.btn2 {
+  padding: 1vh 3vh;
+  border-radius: 5px;
+}
 </style>

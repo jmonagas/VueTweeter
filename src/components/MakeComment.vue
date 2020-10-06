@@ -8,7 +8,10 @@
       placeholder="Max 150 Characters"
     ></textarea>
     <br />
-    <button @click="addThisComment">Comment</button>
+    <br />
+    <button class="btn2" @click="addThisComment">Comment</button>
+    <br />
+    <br />
   </div>
 </template>
 
@@ -67,6 +70,10 @@ export default {
   width: 200px;
   height: 60px;
   background-color: #f5f8fa;
+  border-radius: 5px;
+}
+.btn2 {
+  padding: 1vh 3vh;
   border-radius: 5px;
 }
 </style>

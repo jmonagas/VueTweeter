@@ -23,7 +23,8 @@
     />
     <br />
     <br />
-    <button @click="signupUser">Sign Up</button>
+    <br />
+    <button class="btn" @click="signupUser">Sign Up</button>
   </div>
 </template>
 
@@ -85,5 +86,11 @@ export default {
   height: 30px;
   background-color: #f5f8fa;
   border-radius: 5px;
+}
+.btn {
+  padding: 1vh 13vh;
+  background-color: #088af5;
+  border-radius: 5px;
+  color: white;
 }
 </style>

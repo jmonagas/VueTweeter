@@ -1,21 +1,22 @@
 <template>
   <div id="account_body">
-    <button @click="endSession">Logout</button>
+    <button class="btn4" @click="endSession">Logout</button>
     <create-tweets />
-    <button @click="reviewTweets">Review</button>
-    <button @click="hideContent">Hide/Show</button>
+    <button class="btn4" @click="reviewTweets">Review</button>
+    <button class="btn4" @click="hideContent">Hide/Show</button>
     <ul id="main_content">
       <li v-for="tweet in tweets" :key="tweet.tweetId">
         {{
-          " On " +
-            tweet.created_at +
-            " : " +
-            tweet.username +
-            " wrote : " +
+          tweet.username +
+            " wrote: " +
             tweet.content +
-            " "
+            " on " +
+            tweet.createdAt +
+            "  "
         }}
-        <button @click="deleteTweets(tweet.tweetId)">Delete</button>
+        <button class="btn2" @click="deleteTweets(tweet.tweetId)">
+          Delete
+        </button>
         <edit-tweets :tweetId="tweet.tweetId" />
         <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
@@ -118,6 +119,16 @@ li {
   line-height: 2;
   border: solid 0.5px #e1e8ed;
   padding: 2vh 1vh;
+  border-radius: 5px;
+}
+.btn4 {
+  padding: 1vh 3vh;
+  background-color: #088af5;
+  border-radius: 5px;
+  color: white;
+}
+.btn2 {
+  padding: 1vh 3vh;
   border-radius: 5px;
 }
 </style>

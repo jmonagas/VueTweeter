@@ -10,7 +10,8 @@
     <br />
     <span>{{ myedits }}</span>
     <br />
-    <button @click="editThisTweet">Edit</button>
+    <button class="btn2" @click="editThisTweet">Edit</button>
+    <br />
     <br />
   </div>
 </template>
@@ -70,6 +71,10 @@ export default {
   width: 200px;
   height: 60px;
   background-color: #f5f8fa;
+  border-radius: 5px;
+}
+.btn2 {
+  padding: 1vh 3vh;
   border-radius: 5px;
 }
 </style>

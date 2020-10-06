@@ -9,7 +9,7 @@
     ></textarea>
     <br />
     <br />
-    <button @click="sendThistweet">Send Tweet</button>
+    <button class="btn2" @click="sendThistweet">Send Tweet</button>
     <br />
     <br />
   </div>
@@ -63,6 +63,10 @@ export default {
   width: 300px;
   height: 200px;
   background-color: #f5f8fa;
+  border-radius: 5px;
+}
+.btn2 {
+  padding: 1vh 3vh;
   border-radius: 5px;
 }
 </style>

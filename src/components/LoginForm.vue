@@ -7,7 +7,7 @@
     <input class="box" type="text" id="password-input" v-model="password" />
     <br />
     <br />
-    <button @click="loginUser">Login</button>
+    <button class="btn" @click="loginUser">Login</button>
     <br />
     <br />
     <p>{{ loginStatus }}</p>
@@ -46,7 +46,7 @@ export default {
           cookies.set("session", response.data.loginToken);
           this.$router.push("/account");
           console.log(response);
-          this.loginStatus = "Success";
+          this.loginStatus = "Loading";
         })
         .catch(error => {
           console.log(error);
@@ -69,5 +69,11 @@ export default {
   height: 30px;
   background-color: #f5f8fa;
   border-radius: 5px;
+}
+.btn {
+  padding: 1vh 14vh;
+  background-color: #088af5;
+  border-radius: 5px;
+  color: white;
 }
 </style>

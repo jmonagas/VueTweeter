@@ -1,9 +1,17 @@
 <template>
   <div id="read_comments">
-    <button @click="readThisComment">Read Comments</button>
+    <button class="btn2" @click="readThisComment">Read Comments</button>
+    <br />
+    <br />
     <ul>
-      <li v-for="comment in comments" :key="comment.commentId">
-        {{ comment.content }}
+      <li class="nolist" v-for="comment in comments" :key="comment.commentId">
+        {{
+          comment.username +
+            " wrote: " +
+            comment.content +
+            " on " +
+            comment.createdAt
+        }}
       </li>
     </ul>
   </div>
@@ -53,4 +61,15 @@ export default {
 </script>
 
 <style scoped>
+.btn2 {
+  padding: 1vh 3vh;
+  border-radius: 5px;
+}
+.nolist {
+  list-style: none;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #1da1f2;
+  padding: 1vh;
+}
 </style>

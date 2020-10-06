@@ -24,14 +24,14 @@
     />
     <br />
     <br />
-    <button @click="updateUser">Update Account</button>
+    <button class="btn3" @click="updateUser">Update Account</button>
     <br />
     <br />
     <p>Password</p>
     <input class="box" type="text" id="password-input1" v-model="password" />
     <br />
     <br />
-    <button @click="deleteAccount">Delete Account</button>
+    <button class="btn3" @click="deleteAccount">Delete Account</button>
     <br />
     <br />
   </div>
@@ -117,6 +117,10 @@ export default {
   width: 220px;
   height: 30px;
   background-color: white;
+  border-radius: 5px;
+}
+.btn3 {
+  padding: 1vh 3vh;
   border-radius: 5px;
 }
 </style>
