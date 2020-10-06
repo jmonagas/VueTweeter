@@ -8,6 +8,8 @@
       placeholder="Max 150 Characters"
     ></textarea>
     <br />
+    <span>{{ myedits }}</span>
+    <br />
     <button @click="editThisTweet">Edit</button>
     <br />
   </div>
@@ -34,8 +36,8 @@ export default {
     editThisTweet: function() {
       axios
         .request({
-          method: "POST",
-          url: "https://tweeterest.ml/api/comments",
+          method: "PATCH",
+          url: "https://tweeterest.ml/api/tweets",
           headers: {
             "Content-Type": "application/json",
             "X-Api-Key": "KuxH91zPs9WUhLLav8O6KNil0o4lB1vXKPYnN1nLbJTEl"

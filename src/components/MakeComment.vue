@@ -9,7 +9,6 @@
     ></textarea>
     <br />
     <button @click="addThisComment">Comment</button>
-    <br />
   </div>
 </template>
 

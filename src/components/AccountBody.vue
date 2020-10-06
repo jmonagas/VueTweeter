@@ -17,6 +17,7 @@
         }}
         <button @click="deleteTweets(tweet.tweetId)">Delete</button>
         <edit-tweets :tweetId="tweet.tweetId" />
+        <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
         <follows :userId="tweet.userId" />
       </li>
@@ -28,6 +29,7 @@
 import CreateTweets from "./CreateTweets.vue";
 import MakeComment from "./MakeComment.vue";
 import EditTweets from "./EditTweets";
+import ReadComments from "./ReadComments.vue";
 import Follows from "./Follows.vue";
 
 import axios from "axios";
@@ -35,7 +37,7 @@ import cookies from "vue-cookies";
 
 export default {
   name: "account-body",
-  components: { CreateTweets, MakeComment, EditTweets, Follows },
+  components: { CreateTweets, MakeComment, EditTweets, ReadComments, Follows },
   data() {
     return {
       tweets: []
