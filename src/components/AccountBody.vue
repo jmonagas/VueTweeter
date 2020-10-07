@@ -20,6 +20,7 @@
         <edit-tweets :tweetId="tweet.tweetId" />
         <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
+        <user-profile />
         <follows :userId="tweet.userId" />
       </li>
     </ul>
@@ -31,6 +32,7 @@ import CreateTweets from "./CreateTweets.vue";
 import MakeComment from "./MakeComment.vue";
 import EditTweets from "./EditTweets";
 import ReadComments from "./ReadComments.vue";
+import UserProfile from "./UserProfile";
 import Follows from "./Follows.vue";
 
 import axios from "axios";
@@ -43,6 +45,7 @@ export default {
     MakeComment,
     EditTweets,
     ReadComments,
+    UserProfile,
     Follows
   },
   data() {
