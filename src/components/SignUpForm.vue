@@ -88,7 +88,7 @@ export default {
   border-radius: 5px;
 }
 .btn {
-  padding: 1vh 13vh;
+  padding: 1vh 3vh;
   background-color: #088af5;
   border-radius: 5px;
   color: white;

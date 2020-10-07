@@ -12,6 +12,7 @@
             " on " +
             comment.createdAt
         }}
+        <del-comments :commentId="comment.commentId" />
       </li>
     </ul>
   </div>
@@ -19,9 +20,13 @@
 
 <script>
 import axios from "axios";
+import DelComments from "./DelComments.vue";
 
 export default {
   name: "read-comments",
+  components: {
+    DelComments
+  },
   props: {
     tweetId: {
       type: Number,
@@ -30,7 +35,7 @@ export default {
   },
   data() {
     return {
-      comments: []
+      comments: ""
     };
   },
   methods: {
@@ -49,6 +54,7 @@ export default {
         })
         .then(response => {
           this.comments = response.data;
+          this.comments.reverse();
           console.log(response);
         })
         .catch(error => {

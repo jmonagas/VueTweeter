@@ -38,7 +38,13 @@ import cookies from "vue-cookies";
 
 export default {
   name: "account-body",
-  components: { CreateTweets, MakeComment, EditTweets, ReadComments, Follows },
+  components: {
+    CreateTweets,
+    MakeComment,
+    EditTweets,
+    ReadComments,
+    Follows
+  },
   data() {
     return {
       tweets: []
