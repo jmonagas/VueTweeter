@@ -4,10 +4,9 @@
     <br />
     <br />
     <ul>
-      <li class="nolist" v-for="user in users" :key="user.userId">
-        {{ userprofile }}
-      </li>
+      <li class="nolist" v-for="user in users" :key="user.userId"></li>
     </ul>
+    {{ userId }}
   </div>
 </template>
 
@@ -20,7 +19,7 @@ export default {
 
   data() {
     return {
-      userprofile: []
+      userId: []
     };
   },
   methods: {

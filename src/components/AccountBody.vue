@@ -20,8 +20,8 @@
         <edit-tweets :tweetId="tweet.tweetId" />
         <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
-        <user-profile />
-        <follows :userId="tweet.userId" />
+        <user-profile :tweetId="tweet.tweetId" />
+        <follows :tweetId="tweet.tweetId" />
       </li>
     </ul>
   </div>

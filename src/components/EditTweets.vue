@@ -8,7 +8,6 @@
       placeholder="Max 150 Characters"
     ></textarea>
     <br />
-    <span>{{ myedits }}</span>
     <br />
     <button class="btn2" @click="editThisTweet">Edit</button>
     <br />
