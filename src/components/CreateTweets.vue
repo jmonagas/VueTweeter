@@ -42,7 +42,6 @@ export default {
           }
         })
         .then(response => {
-          cookies.set("mytweet", response);
           console.log(response);
         })
         .catch(error => {
@@ -66,7 +65,7 @@ export default {
   border-radius: 5px;
 }
 .btn2 {
-  padding: 1vh 3vh;
-  border-radius: 5px;
+  padding: 1vh 2vh;
+  border-radius: 20px;
 }
 </style>

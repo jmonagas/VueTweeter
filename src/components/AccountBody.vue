@@ -1,6 +1,6 @@
 <template>
   <div id="account_body">
-    <button class="btn4" @click="endSession">Logout</button>
+    <button class="btn4" @click="endSession">Logout</button> {{ user }}
     <create-tweets />
     <button class="btn4" @click="reviewTweets">Review</button>
     <button class="btn4" @click="hideContent">Hide/Show</button>
@@ -50,7 +50,8 @@ export default {
   },
   data() {
     return {
-      tweets: []
+      tweets: [],
+      user: cookies.get("user")
     };
   },
   methods: {
@@ -84,6 +85,7 @@ export default {
           },
           data: {
             loginToken: cookies.get("session"),
+            user: cookies.get("user"),
             tweetId: tweetId
           }
         })
@@ -99,6 +101,7 @@ export default {
     },
     endSession: function() {
       cookies.remove("session");
+      cookies.remove("user");
       alert("Your Session Has Ended!");
       this.$router.push("/login");
     },
@@ -116,19 +119,18 @@ export default {
 
 <style scoped>
 #account_body {
+  line-height: 2;
+  padding: 3vh;
   text-align: justify;
-  padding: 2vh;
 }
 ul {
-  text-align: justify;
   padding: 1vh;
   list-style: none;
 }
 li {
-  line-height: 2;
   border: solid 0.5px #e1e8ed;
-  padding: 2vh 1vh;
-  border-radius: 5px;
+  padding: 1vh;
+  border-radius: 20px;
 }
 .btn4 {
   padding: 1vh 3vh;
@@ -137,7 +139,7 @@ li {
   color: white;
 }
 .btn2 {
-  padding: 1vh 3vh;
-  border-radius: 5px;
+  padding: 1vh 2vh;
+  border-radius: 20px;
 }
 </style>

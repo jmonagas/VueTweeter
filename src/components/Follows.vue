@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 3vh;
-  border-radius: 5px;
+  padding: 1vh 2vh;
+  border-radius: 20px;
 }
 </style>

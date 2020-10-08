@@ -96,6 +96,7 @@ export default {
         })
         .then(response => {
           cookies.remove("session");
+          cookies.remove("user");
           this.$router.push("/login");
 
           console.log(response.data);

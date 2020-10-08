@@ -6,7 +6,7 @@
     <ul>
       <li class="nolist" v-for="user in users" :key="user.userId"></li>
     </ul>
-    {{ userId }}
+    {{ userId[0] }}
   </div>
 </template>
 
@@ -34,6 +34,9 @@ export default {
           },
           params: {
             userId: this.userId
+            // email: this.email,
+            // username: this.username,
+            // bio: this.bio
           }
         })
         .then(response => {
@@ -51,8 +54,8 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 3vh;
-  border-radius: 5px;
+  padding: 1vh 2vh;
+  border-radius: 20px;
 }
 .nolist {
   list-style: none;

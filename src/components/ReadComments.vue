@@ -68,13 +68,13 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 3vh;
-  border-radius: 5px;
+  padding: 1vh 2vh;
+  border-radius: 20px;
 }
 .nolist {
   list-style: none;
   text-align: left;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid #1da1f2;
   padding: 1vh;
 }

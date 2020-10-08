@@ -44,6 +44,7 @@ export default {
         })
         .then(response => {
           cookies.set("session", response.data.loginToken);
+          cookies.set("user", response.data.email);
           this.$router.push("/account");
           console.log(response);
           this.loginStatus = "Loading";
