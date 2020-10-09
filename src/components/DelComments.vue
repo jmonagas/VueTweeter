@@ -18,11 +18,6 @@ export default {
       required: true
     }
   },
-  //   data() {
-  //     return {
-  //       comments: []
-  //     };
-  //   },
   methods: {
     deleteThisComment: function() {
       console.log(this.commentId);

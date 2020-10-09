@@ -6,11 +6,7 @@
     <ul>
       <li class="nolist" v-for="comment in comments" :key="comment.commentId">
         {{
-          comment.username +
-            " wrote: " +
-            comment.content +
-            " on " +
-            comment.createdAt
+          comment.username + " [ " + comment.content + " ] " + comment.createdAt
         }}
         <del-comments :commentId="comment.commentId" />
       </li>

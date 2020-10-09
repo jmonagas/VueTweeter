@@ -2,11 +2,20 @@
   <div id="user_profile">
     <button class="btn2" @click="readThisProfile">Profile</button>
     <br />
-    <br />
     <ul>
       <li class="nolist" v-for="user in users" :key="user.userId"></li>
     </ul>
-    {{ userId[0] }}
+    <p v-if="user.username != undefined">
+      {{
+        user.userId +
+          ": " +
+          user.username +
+          " [ " +
+          user.bio +
+          " ] " +
+          user.email
+      }}
+    </p>
   </div>
 </template>
 
@@ -16,10 +25,12 @@ import axios from "axios";
 export default {
   name: "user-profile",
   components: {},
-
-  data() {
+  props: {
+    userId: Number
+  },
+  data: function() {
     return {
-      userId: []
+      user: {}
     };
   },
   methods: {
@@ -34,13 +45,10 @@ export default {
           },
           params: {
             userId: this.userId
-            // email: this.email,
-            // username: this.username,
-            // bio: this.bio
           }
         })
         .then(response => {
-          this.userId = response.data;
+          this.user = response.data[0];
           console.log(response);
         })
         .catch(error => {
@@ -62,6 +70,6 @@ export default {
   text-align: left;
   border-radius: 10px;
   border: 1px solid #1da1f2;
-  padding: 1vh;
+  padding: 0.5vh;
 }
 </style>

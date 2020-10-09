@@ -8,9 +8,9 @@
       <li v-for="tweet in tweets" :key="tweet.tweetId">
         {{
           tweet.username +
-            " wrote: " +
+            " [ " +
             tweet.content +
-            " on " +
+            " ] " +
             tweet.createdAt +
             "  "
         }}
@@ -20,8 +20,8 @@
         <edit-tweets :tweetId="tweet.tweetId" />
         <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
-        <user-profile :tweetId="tweet.tweetId" />
-        <follows :tweetId="tweet.tweetId" />
+        <user-profile :userId="tweet.userId" />
+        <follows :userId="tweet.userId" />
       </li>
     </ul>
   </div>
