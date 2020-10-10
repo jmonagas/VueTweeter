@@ -1,15 +1,15 @@
 <template>
-  <div id="edit_tweets">
-    <p>Edit Tweets</p>
+  <div>
+    <h4>Edit Tweets</h4>
     <textarea
       class="box1"
       id="edit-input"
       v-model="myedits"
-      placeholder="Max 150 Characters"
+      placeholder="  Max 150 Characters"
     ></textarea>
     <br />
     <br />
-    <button class="btn2" @click="editThisTweet">Edit</button>
+    <button class="btn4" @click="editThisTweet">Edit</button>
     <br />
     <br />
   </div>
@@ -61,18 +61,15 @@ export default {
 </script>
 
 <style scoped>
-#edit_tweets {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
 .box1 {
-  width: 200px;
-  height: 60px;
-  background-color: #f5f8fa;
-  border-radius: 5px;
+  height: 100px;
+  width: 34vh;
 }
-.btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+.btn4 {
+  padding: 0.5vh 2vh;
+  margin-left: 1.5vh;
+  background-color: #088af5;
+  color: white;
+  border-radius: 5px;
 }
 </style>

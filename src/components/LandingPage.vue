@@ -1,6 +1,6 @@
 <template>
   <div id="landing_page">
-    <div class="one">
+    <div>
       <img
         src="https://cdn.usbrandcolors.com/images/logos/twitter-logo.svg"
         alt="Official Twitter Logo"
@@ -23,9 +23,11 @@ export default {
 <style scoped>
 #landing_page {
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
+  padding: 1vh;
+  line-height: 2;
 }
 img {
-  height: 15vh;
+  height: 18vh;
 }
 </style>

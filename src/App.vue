@@ -13,8 +13,9 @@
 <style scoped>
 #app {
   text-align: right;
-  font-size: 18px;
-  min-height: 90vh;
+  font-size: 14px;
+  min-height: 97vh;
+  border: solid 1px #e1e8ed;
 }
 #nav {
   margin: 0;

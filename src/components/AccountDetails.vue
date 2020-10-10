@@ -1,5 +1,5 @@
 <template>
-  <div id="account_details">
+  <div>
     <h4>Update Account</h4>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
@@ -12,7 +12,7 @@
       class="box"
       id="bio-input"
       v-model="bio"
-      placeholder="Max 200 Characters"
+      placeholder="  Max 200 Characters"
     ></textarea>
     <p>Birthdate</p>
     <input
@@ -20,7 +20,7 @@
       type="text"
       id="birthdate-input"
       v-model="birthdate"
-      placeholder="YYYY-MM-DD"
+      placeholder="  YYYY-MM-DD"
     />
     <br />
     <br />
@@ -110,10 +110,6 @@ export default {
 </script>
 
 <style scoped>
-#account_details {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
 .box {
   width: 220px;
   height: 30px;
@@ -122,6 +118,8 @@ export default {
 }
 .btn3 {
   padding: 1vh 3vh;
+  background-color: black;
   border-radius: 5px;
+  color: white;
 }
 </style>

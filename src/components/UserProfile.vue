@@ -1,21 +1,15 @@
 <template>
-  <div id="user_profile">
+  <div>
     <button class="btn2" @click="readThisProfile">Profile</button>
     <br />
     <ul>
-      <li class="nolist" v-for="user in users" :key="user.userId"></li>
+      <li v-for="user in users" :key="user.userId"></li>
     </ul>
-    <p v-if="user.username != undefined">
-      {{
-        user.userId +
-          ": " +
-          user.username +
-          " [ " +
-          user.bio +
-          " ] " +
-          user.email
-      }}
-    </p>
+    <div id="prof-disp">
+      <p v-if="user.username != undefined"></p>
+      <h4>{{ user.bio }}</h4>
+      <p>{{ user.email }}</p>
+    </div>
   </div>
 </template>
 
@@ -62,14 +56,13 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  padding: 0.5vh 2vh;
+  background-color: #f5f8fa;
+  border-radius: 5px;
+  margin-top: 1vh;
 }
-.nolist {
-  list-style: none;
-  text-align: left;
+#prof-disp {
+  background-color: white;
   border-radius: 10px;
-  border: 1px solid #1da1f2;
-  padding: 0.5vh;
 }
 </style>

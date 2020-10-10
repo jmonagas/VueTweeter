@@ -11,7 +11,7 @@
     <textarea
       class="box"
       v-model="bio"
-      placeholder="Max 200 Characters"
+      placeholder="  Max 200 Characters"
     ></textarea>
     <p>Birthdate</p>
     <input
@@ -19,10 +19,10 @@
       type="text"
       id="birthdate-input"
       v-model="birthdate"
-      placeholder="YYYY-MM-DD"
+      placeholder="  YYYY-MM-DD"
     />
     <br />
-    <br />
+
     <br />
     <button class="btn" @click="signupUser">Sign Up</button>
   </div>
@@ -80,11 +80,12 @@ export default {
 #signup_form {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  margin-top: 10vh;
 }
 .box {
   width: 220px;
   height: 30px;
-  background-color: #f5f8fa;
+  background-color: rgb(235, 243, 242);
   border-radius: 5px;
 }
 .btn {

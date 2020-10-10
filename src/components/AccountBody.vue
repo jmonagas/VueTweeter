@@ -4,16 +4,10 @@
     <create-tweets />
     <button class="btn4" @click="reviewTweets">Review</button>
     <button class="btn4" @click="hideContent">Hide/Show</button>
-    <ul id="main_content">
+    <ul>
       <li v-for="tweet in tweets" :key="tweet.tweetId">
-        {{
-          tweet.username +
-            " [ " +
-            tweet.content +
-            " ] " +
-            tweet.createdAt +
-            "  "
-        }}
+        <h4>{{ tweet.content }}</h4>
+        <p>{{ tweet.createdAt + " posted by " + tweet.username }}</p>
         <button class="btn2" @click="deleteTweets(tweet.tweetId)">
           Delete
         </button>
@@ -118,28 +112,29 @@ export default {
 </script>
 
 <style scoped>
-#account_body {
-  line-height: 2;
-  padding: 3vh;
-  text-align: justify;
-}
-ul {
-  padding: 1vh;
-  list-style: none;
-}
-li {
-  border: solid 0.5px #e1e8ed;
-  padding: 1vh;
-  border-radius: 20px;
-}
 .btn4 {
-  padding: 1vh 3vh;
+  margin-top: 20px;
+  padding: 0.5vh 2vh;
+  margin-left: 1.5vh;
   background-color: #088af5;
-  border-radius: 5px;
   color: white;
+  border-radius: 5px;
 }
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  padding: 0.5vh 1vh;
+  background-color: #e1e8ed;
+  border-radius: 5px;
+}
+#account_body {
+  padding: 1vh;
+}
+ul {
+  list-style: none;
+  background-color: #f5f8fa;
+  padding: 1vh;
+}
+li {
+  border: #1da1f2 1px solid;
+  border-radius: 30px;
 }
 </style>

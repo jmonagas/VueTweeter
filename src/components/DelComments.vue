@@ -1,6 +1,6 @@
 <template>
-  <div id="delete_comments">
-    <button class="btn2" @click="deleteThisComment">Delete Comment</button>
+  <div>
+    <button class="btn2" @click="deleteThisComment">Delete</button>
     <br />
     <br />
   </div>
@@ -47,12 +47,9 @@ export default {
 </script>
 
 <style scoped>
-#delete_comments {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-}
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  background-color: #e1e8ed;
+  padding: 0.5vh 1vh;
+  border-radius: 5px;
 }
 </style>

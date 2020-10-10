@@ -1,11 +1,11 @@
 <template>
-  <div id="add_comments">
-    <p>Add Comments</p>
+  <div>
+    <h4>Add Comments</h4>
     <textarea
       class="box1"
       id="comment-input"
       v-model="mycomment"
-      placeholder="Max 150 Characters"
+      placeholder="  Max 150 Characters"
     ></textarea>
     <br />
     <br />
@@ -61,18 +61,14 @@ export default {
 </script>
 
 <style scoped>
-#add_comments {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-.box1 {
-  width: 200px;
-  height: 60px;
-  background-color: #f5f8fa;
+.btn2 {
+  padding: 0.5vh 2vh;
+  background-color: #088af5;
+  color: white;
   border-radius: 5px;
 }
-.btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+.box1 {
+  height: 100px;
+  width: 34vh;
 }
 </style>

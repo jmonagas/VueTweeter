@@ -62,19 +62,19 @@ export default {
 
 <style scoped>
 #login_form {
+  margin-top: 10vh;
   text-align: center;
-  border-radius: 5px;
 }
 .box {
   width: 220px;
   height: 30px;
-  background-color: #f5f8fa;
+  background-color: rgb(235, 243, 242);
   border-radius: 5px;
 }
 .btn {
   padding: 1vh 3vh;
   background-color: #088af5;
-  border-radius: 5px;
   color: white;
+  border-radius: 5px;
 }
 </style>

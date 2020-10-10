@@ -1,5 +1,5 @@
 <template>
-  <div id="my_follows">
+  <div>
     <button class="btn2" @click="followThis">Follow</button>
     <p>{{ ifollow }}</p>
   </div>
@@ -52,7 +52,10 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  padding: 0.5vh 2vh;
+  background-color: gray;
+  color: white;
+  margin-top: 1vh;
+  border-radius: 5px;
 }
 </style>

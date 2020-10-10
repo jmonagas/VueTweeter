@@ -1,16 +1,15 @@
 <template>
-  <div id="create_tweets">
-    <p>Compose Tweets</p>
+  <div>
+    <h4>Compose Tweets</h4>
     <textarea
       class="box1"
       id="tweet-input"
       v-model="mytweet"
-      placeholder="Max 200 Characters"
+      placeholder="   Max 200 Characters"
     ></textarea>
     <br />
     <br />
     <button class="btn2" @click="sendThistweet">Send Tweet</button>
-    <br />
     <br />
   </div>
 </template>
@@ -54,18 +53,14 @@ export default {
 </script>
 
 <style scoped>
-#create_tweets {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
 .box1 {
-  width: 300px;
   height: 200px;
-  background-color: #f5f8fa;
-  border-radius: 5px;
+  width: 35vh;
+  border-radius: 25px;
 }
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  padding: 0.5vh 2vh;
+  background-color: #f5f8fa;
+  border-radius: 5px;
 }
 </style>

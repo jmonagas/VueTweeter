@@ -1,13 +1,14 @@
 <template>
-  <div id="read_comments">
+  <div>
     <button class="btn2" @click="readThisComment">Read Comments</button>
     <br />
     <br />
     <ul>
-      <li class="nolist" v-for="comment in comments" :key="comment.commentId">
-        {{
-          comment.username + " [ " + comment.content + " ] " + comment.createdAt
-        }}
+      <li v-for="comment in comments" :key="comment.commentId">
+        <h4>{{ comment.content }}</h4>
+        <p>
+          {{ "Posted on " + comment.createdAt + " by " + comment.username }}
+        </p>
         <del-comments :commentId="comment.commentId" />
       </li>
     </ul>
@@ -64,14 +65,17 @@ export default {
 
 <style scoped>
 .btn2 {
-  padding: 1vh 2vh;
-  border-radius: 20px;
+  padding: 0.5vh 2vh;
+  background-color: #f5f8fa;
+  border-radius: 5px;
 }
-.nolist {
+ul {
   list-style: none;
+  line-height: 1.5;
+  border: #1da1f2 1px solid;
+  border-radius: 10px;
+}
+li {
   text-align: left;
-  border-radius: 20px;
-  border: 1px solid #1da1f2;
-  padding: 1vh;
 }
 </style>
