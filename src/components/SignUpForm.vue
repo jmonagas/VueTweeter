@@ -1,6 +1,6 @@
 <template>
   <div id="signup_form">
-    <h4>Please Register</h4>
+    <h3>Please Register</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Username</p>

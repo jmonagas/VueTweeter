@@ -6,7 +6,7 @@
     <button class="btn4" @click="hideContent">Hide/Show</button>
     <ul>
       <li v-for="tweet in tweets" :key="tweet.tweetId">
-        <h4>{{ tweet.content }}</h4>
+        <h3>{{ tweet.content }}</h3>
         <p>{{ tweet.createdAt + " posted by " + tweet.username }}</p>
         <button class="btn2" @click="deleteTweets(tweet.tweetId)">
           Delete
@@ -136,5 +136,6 @@ ul {
 li {
   border: #1da1f2 1px solid;
   border-radius: 30px;
+  padding: 1vh;
 }
 </style>

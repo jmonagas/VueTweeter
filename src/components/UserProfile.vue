@@ -2,13 +2,11 @@
   <div>
     <button class="btn2" @click="readThisProfile">Profile</button>
     <br />
-    <ul>
-      <li v-for="user in users" :key="user.userId"></li>
-    </ul>
     <div id="prof-disp">
       <p v-if="user.username != undefined"></p>
-      <h4>{{ user.bio }}</h4>
+      <h3>{{ user.bio }}</h3>
       <p>{{ user.email }}</p>
+      <p>{{ user.userId }}</p>
     </div>
   </div>
 </template>

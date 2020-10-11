@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Edit Tweets</h4>
+    <h3>Edit Tweets</h3>
     <textarea
       class="box1"
       id="edit-input"

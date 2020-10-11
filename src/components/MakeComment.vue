@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Add Comments</h4>
+    <h3>Add Comments</h3>
     <textarea
       class="box1"
       id="comment-input"

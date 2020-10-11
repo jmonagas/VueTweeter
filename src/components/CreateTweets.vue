@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Compose Tweets</h4>
+    <h3>Compose Tweets</h3>
     <textarea
       class="box1"
       id="tweet-input"

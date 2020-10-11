@@ -1,6 +1,6 @@
 <template>
   <div id="login_form">
-    <h4>Please Login</h4>
+    <h3>Please Login</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Password</p>

@@ -5,7 +5,7 @@
     <br />
     <ul>
       <li v-for="comment in comments" :key="comment.commentId">
-        <h4>{{ comment.content }}</h4>
+        <h3>{{ comment.content }}</h3>
         <p>
           {{ "Posted on " + comment.createdAt + " by " + comment.username }}
         </p>

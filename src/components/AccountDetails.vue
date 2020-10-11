@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Update Account</h4>
+    <h3>Update Account</h3>
     <p>Email</p>
     <input class="box" type="text" id="email-input" v-model="email" />
     <p>Username</p>

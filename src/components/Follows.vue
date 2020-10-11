@@ -1,7 +1,6 @@
 <template>
   <div>
     <button class="btn2" @click="followThis">Follow</button>
-    <p>{{ ifollow }}</p>
   </div>
 </template>
 
@@ -15,31 +14,31 @@ export default {
     userId: {
       type: Number,
       required: true
-    },
-    data() {
-      return {
-        ifollow: cookies.get("ifollow")
-      };
     }
+  },
+  data() {
+    return {
+      loginToken: cookies.get("session")
+    };
   },
   methods: {
     followThis: function() {
       axios
         .request({
-          method: "GET",
+          method: "POST",
           url: "https://tweeterest.ml/api/follows",
           headers: {
             "Content-Type": "application/json",
             "X-Api-Key": "KuxH91zPs9WUhLLav8O6KNil0o4lB1vXKPYnN1nLbJTEl"
           },
           data: {
-            loginToken: cookies.get("session"),
-            userId: this.userId
+            followId: this.userId,
+            loginToken: this.loginToken
           }
         })
         .then(response => {
-          cookies.set("ifollow", response);
           console.log(response);
+          alert("You Are Following This User");
         })
         .catch(error => {
           console.log(error);

@@ -6,7 +6,7 @@
         alt="Official Twitter Logo"
       />
       <h1>Welcome to the Tweeter Project</h1>
-      <h4>This is a mandatory assignment at InnoTech College</h4>
+      <h3>This is a mandatory assignment at InnoTech College</h3>
       <p>Created by Jose G. Monagas</p>
       <p>Copyrights (C) 2020</p>
     </div>
