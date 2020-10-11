@@ -4,7 +4,7 @@
     <create-tweets />
     <button class="btn4" @click="reviewTweets">Review</button>
     <button class="btn4" @click="hideContent">Hide/Show</button>
-    <ul>
+    <ul id="main_content">
       <li v-for="tweet in tweets" :key="tweet.tweetId">
         <h3>{{ tweet.content }}</h3>
         <p>{{ tweet.createdAt + " posted by " + tweet.username }}</p>
@@ -96,6 +96,8 @@ export default {
     endSession: function() {
       cookies.remove("session");
       cookies.remove("user");
+      cookies.remove("myFollows");
+      alert("Do You Mean To End Your Session?");
       alert("Your Session Has Ended!");
       this.$router.push("/login");
     },
@@ -115,7 +117,7 @@ export default {
 .btn4 {
   margin-top: 20px;
   padding: 0.5vh 2vh;
-  margin-left: 1.5vh;
+  margin-left: 2vh;
   background-color: #088af5;
   color: white;
   border-radius: 5px;

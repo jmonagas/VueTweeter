@@ -56,7 +56,7 @@ export default {
 .box1 {
   height: 200px;
   width: 35vh;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 .btn2 {
   padding: 0.5vh 2vh;

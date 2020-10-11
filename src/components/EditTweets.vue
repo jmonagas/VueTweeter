@@ -50,6 +50,8 @@ export default {
         })
         .then(response => {
           console.log(response);
+          alert("Do You Mean To Edit This Tweet?");
+          window.confirm();
         })
         .catch(error => {
           console.log(error);
@@ -63,7 +65,7 @@ export default {
 <style scoped>
 .box1 {
   height: 100px;
-  width: 34vh;
+  width: 33vh;
 }
 .btn4 {
   padding: 0.5vh 2vh;

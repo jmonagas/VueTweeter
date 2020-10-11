@@ -50,6 +50,8 @@ export default {
         })
         .then(response => {
           console.log(response);
+          alert("Do You Mean To Add This Comment?");
+          window.confirm();
         })
         .catch(error => {
           console.log(error);
@@ -69,6 +71,6 @@ export default {
 }
 .box1 {
   height: 100px;
-  width: 34vh;
+  width: 33vh;
 }
 </style>
