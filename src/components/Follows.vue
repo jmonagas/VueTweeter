@@ -41,7 +41,7 @@ export default {
         })
         .then(response => {
           console.log(response);
-          alert("You Are Following This User");
+          alert("You Are Now Following This User");
         })
         .catch(error => {
           console.log(error);

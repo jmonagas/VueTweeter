@@ -12,6 +12,7 @@ import cookies from "vue-cookies";
 
 export default {
   name: "del-comments",
+  components: {},
   props: {
     commentId: {
       type: Number,
@@ -36,8 +37,7 @@ export default {
         })
         .then(response => {
           console.log(response);
-          alert("Do You Mean To Delete This Comment?");
-          window.confirm();
+          confirm("Do You Mean To Delete This Comment?");
         })
         .catch(error => {
           console.log(error);
@@ -50,8 +50,11 @@ export default {
 
 <style scoped>
 .btn2 {
-  background-color: #e1e8ed;
-  padding: 0.5vh 1vh;
+  padding: 0.5vh 2vh;
+  background-color: #aab8c2;
+  color: white;
+  margin-top: 1vh;
   border-radius: 5px;
+  margin-left: 2vh;
 }
 </style>

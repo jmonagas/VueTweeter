@@ -51,7 +51,6 @@ export default {
         .then(response => {
           console.log(response);
           alert("Do You Mean To Add This Comment?");
-          window.confirm();
         })
         .catch(error => {
           console.log(error);

@@ -11,6 +11,7 @@
         <button class="btn2" @click="deleteTweets(tweet.tweetId)">
           Delete
         </button>
+        <likes :tweetId="tweet.tweetId" />
         <edit-tweets :tweetId="tweet.tweetId" />
         <read-comments :tweetId="tweet.tweetId" />
         <make-comment :tweetId="tweet.tweetId" />
@@ -26,9 +27,9 @@ import CreateTweets from "./CreateTweets.vue";
 import MakeComment from "./MakeComment.vue";
 import EditTweets from "./EditTweets";
 import ReadComments from "./ReadComments.vue";
+import Likes from "./Likes.vue";
 import UserProfile from "./UserProfile";
 import Follows from "./Follows.vue";
-
 import axios from "axios";
 import cookies from "vue-cookies";
 
@@ -39,6 +40,7 @@ export default {
     MakeComment,
     EditTweets,
     ReadComments,
+    Likes,
     UserProfile,
     Follows
   },
@@ -87,10 +89,12 @@ export default {
           this.tweets = this.tweets.filter(function(tweet) {
             return tweet.tweetId != tweetId;
           });
+          confirm("Do You Mean To Delete This Tweet?");
           console.log(response.data);
         })
         .catch(error => {
           console.log(error);
+          alert("Something Went Wrong!");
         });
     },
     endSession: function() {

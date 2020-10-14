@@ -99,11 +99,12 @@ export default {
           cookies.remove("user");
           cookies.remove("myFollows");
           this.$router.push("/login");
-
           console.log(response.data);
+          alert("You Have Deleted Your Account!");
         })
         .catch(error => {
           console.log(error);
+          alert("Something Went Wrong!");
         });
     }
   }

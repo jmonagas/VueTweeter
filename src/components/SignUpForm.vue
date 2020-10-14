@@ -22,7 +22,6 @@
       placeholder="  YYYY-MM-DD"
     />
     <br />
-
     <br />
     <button class="btn" @click="signupUser">Sign Up</button>
   </div>
